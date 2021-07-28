@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		D6948FC826ADFC3900592CD7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6948FC726ADFC3900592CD7 /* AppDelegate.swift */; };
 		D6948FCA26ADFC3900592CD7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6948FC926ADFC3900592CD7 /* SceneDelegate.swift */; };
-		D6948FCC26ADFC3900592CD7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6948FCB26ADFC3900592CD7 /* ViewController.swift */; };
+		D6948FCC26ADFC3900592CD7 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6948FCB26ADFC3900592CD7 /* WeatherViewController.swift */; };
 		D6948FCF26ADFC3900592CD7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6948FCD26ADFC3900592CD7 /* Main.storyboard */; };
 		D6948FD126ADFC3900592CD7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6948FD026ADFC3900592CD7 /* Assets.xcassets */; };
 		D6948FD426ADFC3900592CD7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6948FD226ADFC3900592CD7 /* LaunchScreen.storyboard */; };
+		D6F17D1326B04DE900DEF394 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F17D1226B04DE900DEF394 /* WeatherData.swift */; };
+		D6F17D1526B05D9700DEF394 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F17D1426B05D9700DEF394 /* WeatherModel.swift */; };
+		D6F27C6826AF544B00FB9018 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6F27C6726AF544B00FB9018 /* WeatherManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D6948FC426ADFC3900592CD7 /* climaAppIos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = climaAppIos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6948FC726ADFC3900592CD7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D6948FC926ADFC3900592CD7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D6948FCB26ADFC3900592CD7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D6948FCB26ADFC3900592CD7 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		D6948FCE26ADFC3900592CD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D6948FD026ADFC3900592CD7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6948FD326ADFC3900592CD7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6948FD526ADFC3900592CD7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6F17D1226B04DE900DEF394 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		D6F17D1426B05D9700DEF394 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		D6F27C6726AF544B00FB9018 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +64,40 @@
 			children = (
 				D6948FC726ADFC3900592CD7 /* AppDelegate.swift */,
 				D6948FC926ADFC3900592CD7 /* SceneDelegate.swift */,
-				D6948FCB26ADFC3900592CD7 /* ViewController.swift */,
-				D6948FCD26ADFC3900592CD7 /* Main.storyboard */,
+				D6948FDD26ADFC9B00592CD7 /* model */,
+				D6948FDC26ADFC9200592CD7 /* controller */,
+				D6948FDB26ADFC8800592CD7 /* view */,
 				D6948FD026ADFC3900592CD7 /* Assets.xcassets */,
 				D6948FD226ADFC3900592CD7 /* LaunchScreen.storyboard */,
 				D6948FD526ADFC3900592CD7 /* Info.plist */,
 			);
 			path = climaAppIos;
+			sourceTree = "<group>";
+		};
+		D6948FDB26ADFC8800592CD7 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				D6948FCD26ADFC3900592CD7 /* Main.storyboard */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		D6948FDC26ADFC9200592CD7 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				D6948FCB26ADFC3900592CD7 /* WeatherViewController.swift */,
+			);
+			path = controller;
+			sourceTree = "<group>";
+		};
+		D6948FDD26ADFC9B00592CD7 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				D6F27C6726AF544B00FB9018 /* WeatherManager.swift */,
+				D6F17D1226B04DE900DEF394 /* WeatherData.swift */,
+				D6F17D1426B05D9700DEF394 /* WeatherModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +170,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D6948FCC26ADFC3900592CD7 /* ViewController.swift in Sources */,
+				D6948FCC26ADFC3900592CD7 /* WeatherViewController.swift in Sources */,
+				D6F17D1326B04DE900DEF394 /* WeatherData.swift in Sources */,
 				D6948FC826ADFC3900592CD7 /* AppDelegate.swift in Sources */,
+				D6F27C6826AF544B00FB9018 /* WeatherManager.swift in Sources */,
+				D6F17D1526B05D9700DEF394 /* WeatherModel.swift in Sources */,
 				D6948FCA26ADFC3900592CD7 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +323,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R8LFKVJKW8;
 				INFOPLIST_FILE = climaAppIos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -305,6 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = R8LFKVJKW8;
 				INFOPLIST_FILE = climaAppIos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
